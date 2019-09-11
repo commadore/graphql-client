@@ -1,10 +1,10 @@
 <?php
 
-namespace GraphQLClient;
+namespace Commadore\GraphQLClient;
 
-use GraphQLClient\Exceptions\GraphQLPayloadException;
-use GraphQLClient\Exceptions\InvalidJsonException;
-use GraphQLClient\Interfaces\GraphQLResponseInterface;
+use Commadore\GraphQLClient\Exceptions\GraphQLPayloadException;
+use Commadore\GraphQLClient\Exceptions\InvalidJsonException;
+use Commadore\GraphQLClient\Interfaces\GraphQLResponseInterface;
 use Psr\Http\Message\ResponseInterface;
 
 class GraphQLResponse implements GraphQLResponseInterface
@@ -14,7 +14,7 @@ class GraphQLResponse implements GraphQLResponseInterface
 
     public function __construct(ResponseInterface $response)
     {
-        $body = $response->getBody();
+        $body = $response->getBody()->getContents();
 
         $jsonDecoded = json_decode($body, true);
         $error = json_last_error();
@@ -32,8 +32,8 @@ class GraphQLResponse implements GraphQLResponseInterface
             );
         }
 
-        $this->payload = $decodedResponse['data'] ?? [];
-        $this->errors = $decodedResponse['errors'] ?? [];
+        $this->payload = $jsonDecoded['data'] ?? [];
+        $this->errors = $jsonDecoded['errors'] ?? [];
     }
 
     public function getPayload(): array

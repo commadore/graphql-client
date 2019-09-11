@@ -1,6 +1,6 @@
 <?php
 
-namespace GraphQLClient\Exceptions;
+namespace Commadore\GraphQLClient\Exceptions;
 
 use Exception;
 

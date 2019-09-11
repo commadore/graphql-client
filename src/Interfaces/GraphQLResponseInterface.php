@@ -1,6 +1,6 @@
 <?php
 
-namespace GraphQLClient\Interfaces;
+namespace Commadore\GraphQLClient\Interfaces;
 
 interface GraphQLResponseInterface
 {

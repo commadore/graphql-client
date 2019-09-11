@@ -1,12 +1,11 @@
 {
     "name": "commadore/graphql-client",
-    "type": "library",
     "description": "A php GraphQL Client.",
-    "autoload": {
-        "psr-4": {
-            "Commadore\\GraphQLClient\\": "GraphQLClient/"
-        }
-    },
+    "type": "library",
+    "keywords": [
+        "GraphQL",
+        "Client"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -20,5 +19,15 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Commadore\\GraphQLClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Commadore\\GraphQLClient\\Test\\": "tests/"
+        }
     }
 }

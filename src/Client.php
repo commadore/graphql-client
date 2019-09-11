@@ -1,9 +1,9 @@
 <?php
 
-namespace GraphQLClient;
+namespace Commadore\GraphQLClient;
 
-use GraphQLClient\Exceptions\NetworkException;
-use GraphQLClient\Interfaces\ClientInterface as GraphQLClientInterfaceAlias;
+use Commadore\GraphQLClient\Exceptions\NetworkException;
+use Commadore\GraphQLClient\Interfaces\ClientInterface as GraphQLClientInterfaceAlias;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\TransferException;
 
