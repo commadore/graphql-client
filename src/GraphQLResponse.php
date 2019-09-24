@@ -48,6 +48,6 @@ class GraphQLResponse implements GraphQLResponseInterface
 
     public function getErrors(): array
     {
-        return $this->getErrors();
+        return $this->errors;
     }
 }
