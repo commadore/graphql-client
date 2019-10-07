@@ -43,7 +43,7 @@ class ClientTest extends TestCase
 
         $sut = new Client($client);
 
-        $graphQLResponse = $sut->query('test', ['variables']);
+        $graphQLResponse = $sut->query('test', ['variable1' => 'value1']);
         $payload = $graphQLResponse->getPayload();
         $this->assertInstanceOf(GraphQLResponse::class, $graphQLResponse);
         $this->assertEquals('Bar',$payload['Foo']);

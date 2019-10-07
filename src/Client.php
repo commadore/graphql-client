@@ -28,7 +28,7 @@ class Client implements GraphQLClientInterfaceAlias
 
         if (!empty($variables))
         {
-            $options['json']['variables'] = $variables;
+            $options['json']['variables'] = (object) $variables;
         }
 
         try
