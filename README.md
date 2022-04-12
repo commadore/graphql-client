@@ -1,3 +1,5 @@
+# This repository is no longer actively maintained. There are way better ways to interact with graphql
+
 # PHP GraphQL Client
 
 Essentially a wrapper for Guzzle for GraphQL queries.
